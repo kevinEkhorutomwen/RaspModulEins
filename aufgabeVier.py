@@ -25,18 +25,25 @@ def loop():
     GPIO.add_event_detect(SWITCH[1], GPIO.FALLING, callback = countLKW, bouncetime = 200)
     while True:
         GPIO.wait_for_edge(SWITCH[2], GPIO.RISING)
-        print(chr(27) + "[2J")
+        output()
         destroy()
 
 def countPKW(channel):
     global PKW
     PKW = PKW + 1
-    print PKW
+    output()
 
 def countLKW(channel):
     global LKW
     LKW = LKW +1
-    print LKW
+    output()
+
+def output
+    global PKW
+    global LKW
+    print(chr(27) + "[2J")
+    print 'Anzahl der PKWs: ' + str(PKW)
+    print 'Anzahl der LKWs: ' + str(LKW)
 
 
 
