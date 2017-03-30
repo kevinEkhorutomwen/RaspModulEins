@@ -25,7 +25,7 @@ def loop():
     GPIO.add_event_detect(SWITCH[1], GPIO.FALLING, callback = countLKW, bouncetime = 200)
     while True:
         GPIO.wait_for_edge(SWITCH[2], GPIO.RISING)
-        print str(PKW) + ' PKW und' + str(LKW) + ' LKWS'
+        print(chr(27) + "[2J")
         destroy()
 
 def countPKW(channel):
