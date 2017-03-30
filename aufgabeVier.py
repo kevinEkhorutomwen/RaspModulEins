@@ -7,7 +7,7 @@ import sys
 
 SWITCH = [17,27,22]
 DELAY = 0.5
-PKW, LKW = 0
+PKW, LKW = 0, 0
 
 def setup():
     GPIO.setmode(GPIO.BCM)
