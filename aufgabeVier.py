@@ -21,8 +21,8 @@ def destroy():
     sys.exit()
 
 def loop():
-    GPIO.add_event_detect(SWITCH[0], GPIO.FALLING, callback = countPKW, bouncetime = 500)
-    GPIO.add_event_detect(SWITCH[1], GPIO.FALLING, callback = countLKW, bouncetime = 500)
+    GPIO.add_event_detect(SWITCH[0], GPIO.FALLING, callback = countPKW, bouncetime = 200)
+    GPIO.add_event_detect(SWITCH[1], GPIO.FALLING, callback = countLKW, bouncetime = 200)
     while True:
         GPIO.wait_for_edge(SWITCH[2], GPIO.RISING)
         print 'Ciao'
