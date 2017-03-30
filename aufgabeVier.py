@@ -38,7 +38,7 @@ def countLKW(channel):
     LKW = LKW +1
     output()
 
-def output
+def output():
     global PKW
     global LKW
     print(chr(27) + "[2J")
