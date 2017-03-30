@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import RPi.GPIO as GPIO
-import time
 import sys
+import os
 
 SWITCH = [17,27,22]
 DELAY = 0.5
@@ -41,7 +41,8 @@ def countLKW(channel):
 def output():
     global PKW
     global LKW
-    print(chr(27) + "[2J")
+    #print(chr(27) + "[2J")
+    os.system('cls' if os.name == 'nt' else 'clear')
     print 'Anzahl der PKWs: ' + str(PKW)
     print 'Anzahl der LKWs: ' + str(LKW)
 
