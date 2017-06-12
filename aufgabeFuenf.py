@@ -6,8 +6,8 @@ import sys
 import os
 
 LED = [17,27,22]
-status = os.statvfs(´/´)
-s = os.statvfs
+status = os.statvfs()
+
 
 
 def setup():
@@ -23,10 +23,11 @@ def destroy():
 
 def loop():
     while True:
-        MB = status.f_bsize * s.f_bavail / 1048576
+        MB = status.f_bsize * status.f_bavail / 1048576
         print MB
 
 def output():
+    print''
 
 if __name__ == '__main__':
     global INTERRUPT
